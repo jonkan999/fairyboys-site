@@ -1,0 +1,64 @@
+  .main-div{
+    padding: 5vh 5vw;
+    text-Align: center;
+    font-Size: 1.2vh;
+  }
+  .form-label {
+    font-Size: 1.5vh;
+  }
+  .form-field {
+    height: 3vh;
+    width: 40vw;
+    text-Align: center;
+    font-Size: 1.5vh;
+  }
+  
+  .submit-button{
+    margin: auto;
+    width: 50vw;
+    height: 8vh;
+    background-color: lightgrey;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    outline: none;
+    color: black;
+    font-size: 4vh;
+    font-family: DINOT-Light Regular;
+  
+  }
+  .formpic1{
+    display: block;
+    transform: translateZ(0) scale(0.999999);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+  }
+  .formpic2{
+    display: block;
+    transform: translateZ(0) scale(0.999999);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+  }
+ 
+   /* condition for screen size minimum of 500px */
+  @media (min-width:839px) {
+
+    /* your conditional / responsive CSS inside this condition */
+    .main-div{
+      padding: 5vh 20vw;
+      text-Align: center;
+      font-Size: 2vh;
+    }
+
+    .formpic1 {  
+      width: 60%;
+      height: 60%; }
+      .formpic2 {  
+        width: 60%;
+        height: 60%; }
+    }
+    
