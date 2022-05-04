@@ -18,16 +18,22 @@ export const CarouselContainer = styled.div`
     if (props.dir === PREV) return "translateX(calc(2 * (-80% - 20px)))";
     return "translateX(0%)";
   }};
+  
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
   overflow: hidden;
+  @media (min-width:839px) {
+    width: 39%;
+    height: 39%;
+    margin-left 30%;
+  }
 `;
 
 export const CarouselSlot = styled.div`
   flex: 1 0 100%;
-  flex-basis: 80%;
+  flex-basis: 85%;
   margin-right: 20px;
   order: ${props => props.order};
 `;
@@ -38,18 +44,33 @@ z-index: 10;
     color: grey;
     font-size: 7vw;
     font-weight: 10;
-    background-color: white;
-    border: 1px solid white;
+    background-color: transparent;
+  border: 1px solid transparent;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
   top: 111vw;
   right: 3vw;
+  width: 6vw;
   text-decoration: none;
   float: ${props => props.float};
   &:focus {
-    outline: 0;
+    outline: none !important;
+    box-shadow: 0 !important;
   }
+  &:active {
+    outline: 0 !important;
+    box-shadow: 0 !important;
+    background-color: none !important;
+  }
+  @media (min-width:839px) {
+    top: 38vw;
+    right: 32vw;
+    font-size: 4vw;
+    font-weight: 5;
+    
+  }
+
 `;
 
 export const LeftSlideButton = styled.button`
@@ -58,17 +79,31 @@ z-index: 10;
     color: grey;
     font-size: 7vw;
     font-weight: 10;
-    background-color: white;
-    border: 1px solid white;
+    background-color: transparent;
+    border: 1px solid transparent;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
   top: 111vw;
   left: 3vw;
+  width: 6vw;
   text-decoration: none;
   float: ${props => props.float};
   &:focus {
-    outline: 0;
+    outline: none !important;
+    box-shadow: 0 !important;
+  }
+  &:active {
+    outline: 0 !important;
+    box-shadow: 0 !important;
+    background-color: none !important;
+  }
+  @media (min-width:839px) {
+    top: 38vw;
+    left: 32vw;
+    font-size: 4vw;
+    font-weight: 5;
+    
   }
 `;
 
