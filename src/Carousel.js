@@ -15,6 +15,18 @@ const getOrder = ({ index, pos, numItems }) => {
 };
 const initialState = { pos: 0, sliding: false, dir: NEXT };
 
+const getText = ({ pos}) => {
+  if (pos === 1) {
+  return 'Base package: Branded form app with sassy acrylic QR-code blocks';
+} else if (pos === 2) {
+  return 'Addon 1: Gamefied addon app with customizable prizes'
+} else if (pos === 3) {
+  return 'Addon 2: Large monitor with customizable graphics for crowd engagement'
+} else {
+  return 'Swipe to view over different product suites'
+}
+};
+
 const Carousel = props => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
   const numItems = React.Children.count(props.children);
@@ -32,6 +44,7 @@ const Carousel = props => {
   });
   return (
     <div {...handlers}>
+      <div>
       <Wrapper>
         <CarouselContainer dir={state.dir} sliding={state.sliding}>
           {React.Children.map(props.children, (child, index) => (
@@ -50,7 +63,10 @@ const Carousel = props => {
       <RightSlideButton onClick={() => slide(NEXT)} float="right">
       &#10093;
       </RightSlideButton>
+      </div>
+      <div><h>{getText({pos: state.pos})}</h></div>
     </div>
+    
   );
 };
 
