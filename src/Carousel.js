@@ -19,11 +19,11 @@ const getText = ({ pos}) => {
   if (pos === 1) {
   return 'Base package: Branded form app with sassy acrylic QR-code blocks';
 } else if (pos === 2) {
-  return 'Addon 1: Gamefied addon app with customizable prizes'
+  return 'Addon 1: Gamified addon app with customizable prizes'
 } else if (pos === 3) {
   return 'Addon 2: Large monitor with customizable graphics for crowd engagement'
 } else {
-  return 'Swipe to view over different product suites'
+  return 'Swipe to view our different product suites'
 }
 };
 
